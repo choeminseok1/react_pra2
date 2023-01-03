@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.RockPaperScissors {
+  width: 500px;
+  height: 500px;
+  padding: 20px 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.me {
+  width: 50%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.516);
+  overflow: hidden;
+}
+.imgBox img {
+  width: 100%;
+}
+.computer {
+  width: 50%;
+  height: 100%;
+  background-color: rgba(238, 130, 238, 0.402);
+  overflow: hidden;
+}
+.btn_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 200px
+}
+.btn {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.scissors {
+  background-color: dodgerblue;
+}
+.rock {
+  background-color: aliceblue;
+}
+.paper {
+  background-color: beige;
+}
