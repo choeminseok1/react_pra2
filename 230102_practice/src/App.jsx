@@ -13,10 +13,10 @@ function App() {
       <BrowserRouter>
       <Navigation></Navigation>
         <Routes>
-          <Route path='/' element={<Shop/>}></Route>
-          <Route path='/home' element={<Home/>}/>
+          <Route path='/' element={<Home/>}/>
           <Route path='/fetchnormal' element={<FetchNormal/>}/>
           <Route path='/shop' element={<Shop/>}/>
+          <Route path='/'/>
         </Routes>
       </BrowserRouter>
     </div>

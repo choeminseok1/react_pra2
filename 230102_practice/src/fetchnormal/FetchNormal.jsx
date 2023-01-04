@@ -13,7 +13,7 @@ function FetchNormal() {
     }
 
     return (
-        <>
+        <div className='fetch_practice_wrap'>
             <p>제목 : fetch로 데이터 받아오기 연습.jsonplaceholder 사용</p>
             <button onClick={callBack}>유저정보 받기</button>
             {
@@ -26,7 +26,7 @@ function FetchNormal() {
             )
             // map에는 중괄호로 묶어주지 않는다. 묶어주고 싶다면()를 사용하거나, return을 해줘야한다.
             }
-        </>
+        </div>
     )
 }
 
