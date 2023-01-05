@@ -6,10 +6,76 @@
 img {
     max-width: 100%;
 }
+
+/* 네비게이션 */
+.navi_wrap {
+    max-width: 100%;
+    text-align: center;
+    padding: 50px 0px;
+}
+.navi_menu {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+.navi_logo  img {
+    max-width: 8%;
+}
+.navi_content {
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    transition: .3s;
+}
+.navi_content:hover {
+    color: gray;
+    transform: scale(1.1);
+}
+.search_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 200px;
+    padding-bottom: 50px;
+    gap: 10px;
+}
+
+/* 메인 */
+.home_wrap {
+    max-width: 100%;
+    text-align: center;
+}
+.home_header {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+iframe {
+    margin: 0 auto;
+}
+
+/* 패치 */
+.fetch_practice_wrap {
+    max-width: 100%;
+    text-align: center;
+}
+
+/* 쇼핑 */
 .sellWrap {
     max-width: 1500px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;
+}
+.sellWrap::-webkit-scrollbar {
+    display: none;
+}
+.content_img img {
+    cursor: pointer;
 }
