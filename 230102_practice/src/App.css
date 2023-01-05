@@ -6,16 +6,6 @@
 img {
     max-width: 100%;
 }
-.sellWrap {
-    max-width: 1500px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 30px;
-}
-.sellWrap::-webkit-scrollbar {
-    display: none;
-}
 
 /* 네비게이션 */
 .navi_wrap {
@@ -46,6 +36,14 @@ img {
     color: gray;
     transform: scale(1.1);
 }
+.search_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 200px;
+    padding-bottom: 50px;
+    gap: 10px;
+}
 
 /* 메인 */
 .home_wrap {
@@ -65,4 +63,19 @@ iframe {
 .fetch_practice_wrap {
     max-width: 100%;
     text-align: center;
+}
+
+/* 쇼핑 */
+.sellWrap {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+.sellWrap::-webkit-scrollbar {
+    display: none;
+}
+.content_img img {
+    cursor: pointer;
 }

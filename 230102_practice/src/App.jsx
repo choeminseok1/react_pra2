@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import './App.css'
-import { BrowserRouter,Route,Routes } from "react-router-dom";
+import { BrowserRouter,Link,Route,Routes } from "react-router-dom";
 import Navigation from './navigation/Navigation';
 import Home from './home/Home';
 import FetchNormal from './fetchnormal/FetchNormal';
 import Shop from "./shop/Shop";
+import Detail from './detail/Detail';
 
 function App() {
 
@@ -14,9 +15,9 @@ function App() {
       <Navigation></Navigation>
         <Routes>
           <Route path='/' element={<Home/>}/>
+          <Route path='/detail/:id' element={<Detail/>}/>
           <Route path='/fetchnormal' element={<FetchNormal/>}/>
           <Route path='/shop' element={<Shop/>}/>
-          <Route path='/'/>
         </Routes>
       </BrowserRouter>
     </div>

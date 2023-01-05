@@ -6,8 +6,6 @@ function shop() {
         {
             choice: '',
             img:'',
-
-
         }
     ])
     const [loading,setLoading] = useState(true)
