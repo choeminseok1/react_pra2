@@ -1,33 +1,38 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
-import Card from '../components/Card';
+import { useDispatch,useSelector } from 'react-redux';
+import { shopAction } from '../redux/action/shopAction';
 
 function Home() {
-    const [data,setData] = useState([])
-    const [loading,setLoading] = useState(true)
+  let shopItem = useSelector(state=>state.shop)
+  let dispatch = useDispatch()
+  const [loading,setLoading] = useState(true)
 
-    useEffect(()=>{
-      fetch('https://my-json-server.typicode.com/hongyungeun/react-router-practice/products')
-      .then((res)=>res.json())
-      .then((res)=>{
-          setData(res)
-          setLoading(false)
-      })
-    },[])
+  const shopCall = ()=> {
+    dispatch(shopAction.shopItem())
+  } 
+
+  useEffect(()=>{
+    console.log(shopItem)
+    setLoading(false)
+    shopCall()
+  },[])
 
   return (
     <div className='content_wrap'>
-      {loading ? <>로딩중</> : 
-        data.map((item,i)=>
-        (
-          <Card props={item}/>
-        )
-        )
-      }
-      
-      
+      <div className='shop_wrap'>
+        {loading ? <>기다려주세요</> : shopItem.list.map((item)=>
+        <div className='shop_item'>
+          <div>
+            <img src={item.img}/>
+          </div>
+          <div>{item.title}</div>
+          <div>{item.new ? <>신제품</> : <>없음</>}</div>
+          <div>{item.price}</div>
+        </div>
+      )}
+      </div>
     </div>
-
   )
 }
 

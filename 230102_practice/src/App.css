@@ -79,3 +79,13 @@ iframe {
 .content_img img {
     cursor: pointer;
 }
+
+/* 디테일 */
+.content_detail_wrap {
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}

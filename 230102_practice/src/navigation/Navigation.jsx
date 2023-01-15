@@ -17,6 +17,7 @@ function Navigation() {
       <div className='navi_menu'>
         <Link className='navi_content' to="/fetchnormal">Fetch</Link>
         <Link className='navi_content' to="/shop">Shop</Link>
+        <Link className='navi_content' to="/redux">Redux</Link>
       </div>
       {/* 위의 ''에는 app router의 path와 동일하게 적는다  */}
     </div>

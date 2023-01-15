@@ -8,5 +8,6 @@ import store from './redux/store'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>
     <App />
+    {/* 정보를 뿌려주는장소 */}
   </Provider>
 )

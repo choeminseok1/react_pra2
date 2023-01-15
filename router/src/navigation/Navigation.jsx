@@ -1,7 +1,17 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 function Navigation() {
   const item = ['여성','남성','자켓','아우터','이너','악세서리']
+  const [inputVal,setInputVal] = useState()
+
+  const call = ()=>{
+    console.log(inputVal)
+    let url = `https://my-json-server.typicode.com/hongyungeun/react-router-practice/products?q=${inputVal}`
+    fetch(url)
+    .then(res=>res.json())
+    .then(res=> console.log(res))
+  }
+  
   return (
     <div className='navigation_wrap'>
       <div className="login_header">
@@ -22,8 +32,8 @@ function Navigation() {
           )}
         </div>
         <div className="chose_right">
-          <input className='search_input' type="text" />
-          <button className='search_btn'>검색</button>
+          <input className='search_input' type="text" value={inputVal} onChange={(e)=>setInputVal(e.target.value)} />
+          <button className='search_btn' onClick={call}>검색</button>
         </div>
       </div>
     </div>

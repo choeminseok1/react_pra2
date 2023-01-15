@@ -1,13 +1,9 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
+import Card from '../components/Card';
 
 function shop() {
-    const [sellData,setSellData] = useState([
-        {
-            choice: '',
-            img:'',
-        }
-    ])
+    const [sellData,setSellData] = useState([])
     const [loading,setLoading] = useState(true)
 
     useEffect(()=>{
@@ -21,25 +17,12 @@ function shop() {
 
     return (
         <div className='sellWrap'>
-            {loading ? <>로딩중</> : sellData.map((dataValue,i)=>(
-                    <div className="content" key={i}>
-                        <div className="content_img">
-                            <img src={dataValue.img} alt="" />
-                        </div>
-                        <div className="content_recommendation">
-                            {dataValue.choice ? <p>추천</p> : <>비추천</>}
-                        </div>
-                        <div className="content_name">
-                            {dataValue.title}
-                        </div>
-                        <div className="content_price">
-                            {dataValue.price}
-                        </div>
-                        <div className="content_newold">
-                            {dataValue.new ? <p>신제품</p> : <p>구제품</p>}
-                        </div>
-                    </div>
-                ))
+            {loading ? <>로딩중</> : 
+                sellData.map((item,i)=>
+                (
+                <Card props={item}/>
+                )
+                )
             }
         </div>
     )

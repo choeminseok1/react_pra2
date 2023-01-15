@@ -46,7 +46,7 @@ state값을 전역적으로 저장함
 3. action은 reducer에 있는값들 중에 누구를 어떻게 변화 시킬건지 적어둔 공간->순수 함수여야 함
 4. dispatch로 action을 실행시킨후 reducer로 넘어가 state값을 저장하거나 변경시킴
 
-useDispatch => 액션을 실행시킴 (dipatch -> 액션함수실행 -> state저장&변경)
+useDispatch => 액션을 실행시킴 (dispatch -> 액션함수실행 -> state저장&변경)
 Ex) let dispatch = useDispatch()  ==> 리액트 리덕스와 리덕스 툴킷의 사용방법이 다름
      - dispatch(countAction.countUp()) ->리덕스
      - dispatch(apiCall()) -> 리덕스 툴킷

@@ -12,20 +12,20 @@ img {
 }
 
 /* home 컨텐츠 */
-.content_wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: center;
-    gap: 20px;
-    max-width: 1500px;
-    margin: 0 auto;
-}
 .content_detail {
     display: flex;
     align-items: center;
     max-width: 1000px;
     margin: 0 auto;
     
+}
+.shop_wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 /* 네비게이션 */

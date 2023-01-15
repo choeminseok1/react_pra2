@@ -23,21 +23,9 @@ function Detail() {
     <div className="content_detail">
         {loading ? <div>로딩중입니다</div> : 
         <>
-            {/* <div className="content_img">
-                <img src={idData.img} alt="" />
-            </div> */}
             <ImgCard item={idData.img}/>
             <div className="content_right">
                 <Recommendation item={idData}/>
-                {/* <div className="content_name">
-                    {idData.title}
-                </div>
-                <div className="content_price">
-                    {idData.price}
-                </div>
-                <div className="content_recommendation">
-                    {idData.choice ? <p>추천</p> : <></>}
-                </div> */}
                 <select name="" id="">
                     <option hidden>사이즈 선택</option>
                     {idData.size.map((size)=>
